@@ -15,7 +15,8 @@ function App() {
       setEmployeeArray(employeeResponseJson);
       setPerPageData(employeeResponseJson.slice(0, 10));
     } catch (err) {
-      console.log(err);
+      console.log(err, "failed to fetch data");
+      window.alert("failed to fetch data");
     }
   };
   const handleClick = (direction) => {
